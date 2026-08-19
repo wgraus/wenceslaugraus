@@ -1,317 +1,318 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Wenceslau Graus</title>
-	<meta charset="utf-8" />
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="A life of adventure">
-	<meta name="author" content="Wenceslau Graus">
-	<meta name="keywords" content="web,design,html,css,html5,development">
-	<meta property="og:title" content="Wenceslau Graus">
-	<meta property="og:image" content="images/spotlight01.webp">
-	<meta property="og:description" content="A life of adventure">
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<script>
-		function init() {
-		  var imgDefer = document.getElementsByTagName('img');
-		  for (var i = 0; i < imgDefer.length; i++) {
-			if (imgDefer[i].getAttribute('data-src')) {
-			  imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-			}
-		  }
-		}
-		
-		window.onload = init;
-		</script>
+  <title>Wenceslau Graus</title>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Trail Runner &amp; Developer - Wenceslau Graus" />
+  <meta name="author" content="Wenceslau Graus" />
+  <meta property="og:title" content="Wenceslau Graus" />
+  <meta property="og:image" content="images/banner.webp" />
+  <meta property="og:description" content="Trail Runner &amp; Developer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
+<body>
 
-<body class="is-preload">
+  <div class="gradient-orb orb-1"></div>
+  <div class="gradient-orb orb-2"></div>
+  <div class="gradient-orb orb-3"></div>
 
-	<!-- Wrapper -->
-	<div id="wrapper" class="divided">
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">WG</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#adventure">Adventure</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-		<!-- One -->
-		<section
-			class="banner style1 orient-right content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right invert content-align-center">
-			<div class="content">
-				<h1>Wenceslau Graus</h1>
-				<p class="major">I had a real hunger to explore from a young age. Always curious. Never still. Eager to
-					discover new places and follow the path less trodden.</p>
-				<ul class="actions stacked">
-					<li><a href="#first" class="button big wide smooth-scroll-middle">Discover</a></li>
-				</ul>
-			</div>
-			<div class="image">
-				<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/banner.webp" alt="Wenceslau Graus" />
-			</div>
-		</section>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#adventure">Adventure</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#tech">Tech Stack</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-		<!-- Two -->
-		<section
-			class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in onscroll-content-fade-right invert"
-			id="first">
-			<div class="content">
-				<h2>A life of adventure</h2>
-				<p>I love hiking because I get to see new things, be in the wild outdoors. Hiking clears your mind. It
-					is a great way to unwind and get back on track. The best part of hiking is taking time to enjoy the
-					views along the way.
-				</p>
-				<ul class="actions">
-					<li><a href="http://targets.wenceslaugraus.com" class="button">Targets</a></li>
-					<li><a href="http://mapzone.wenceslaugraus.com" class="button">MapZone</a></li>
-				</ul>
-			</div>
-			<div class="image">
-				<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/spotlight001.webp" alt="A life of adventure" />
-			</div>
-		</section>
+  <section class="hero" id="hero">
+    <canvas class="hero-lines" id="hero-lines"></canvas>
+    <div class="hero-content">
+      <p class="hero-tag" data-reveal>Trail Runner &amp; Developer</p>
+      <h1 class="hero-name" data-reveal>
+        <span class="name-line">Wenceslau</span>
+        <span class="name-line accent">Graus</span>
+      </h1>
+      <p class="hero-sub" data-reveal>Exploring mountains. Building digital experiences.</p>
+      <div class="hero-cta" data-reveal>
+        <a href="#adventure" class="btn btn-primary">Discover</a>
+        <a href="#tech" class="btn btn-ghost">Tech Stack</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" data-reveal>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-		<!-- Three -->
-		<section
-			class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in onscroll-content-fade-right invert">
-			<div class="content">
-				<h2>Photography</h2>
-				<p>I love taking pictures for the sake of telling stories. But, these same stories are told more
-					effectively when we admit the difference between the images from a camera and the experiences
-					themselves.</p>
-				<ul class="actions">
-					<li><a href="https://photos.google.com/albums" class="button">Google Photos</a></li>
-					<li><a href="http://photos.wenceslaugraus.com" class="button">Photos</a></li>
-				</ul>
-			</div>
-			<div class="image">
-				<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/spotlight002.webp" alt="Photography" />
-			</div>
-		</section>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <span class="section-label">01 / About</span>
+          <h2>A life of<br /><span class="accent">adventure</span></h2>
+          <p>I had a real hunger to explore from a young age. Always curious. Never still. Eager to discover new places and follow the path less trodden. I love hiking because I get to see new things, be in the wild outdoors. Hiking clears your mind.</p>
+          <p>When I'm not on the trails, I'm crafting web experiences &mdash; front-end development, creative coding, and building tools for outdoor enthusiasts.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Peaks climbed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10K+</span>
+              <span class="stat-label">Kilometers hiked</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Adventure photos</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image" data-reveal data-parallax="0.15">
+          <div class="image-frame">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/spotlight001.webp" alt="Trail running in the mountains" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Four -->
-		<section
-			class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in onscroll-content-fade-right invert">
-			<div class="content">
-				<h2>Creative Ideas</h2>
-				<p>I love web design, front-end developing and programming. Creative ideas often hit's me like stones
-					from outer space. That space is my playground where I can express myself. If you share the same
-					space feel free to contact me.</p>
-			</div>
-			<div class="image">
-				<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/spotlight003.webp" alt="Creative Ideas" />
-			</div>
-		</section>
+  <section class="section section-dark" id="adventure">
+    <div class="container">
+      <div class="about-grid about-grid-reverse">
+        <div class="about-image" data-reveal data-parallax="0.15">
+          <div class="image-frame">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/spotlight002.webp" alt="Mountain photography" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-text" data-reveal>
+          <span class="section-label">02 / Adventure</span>
+          <h2>Capturing<br /><span class="accent">moments</span></h2>
+          <p>I love taking pictures for the sake of telling stories. These same stories are told more effectively when we admit the difference between the images from a camera and the experiences themselves.</p>
+          <p>Every summit has a story. Every trail has a lesson. Photography is how I keep those memories alive.</p>
+          <div class="link-group">
+            <a href="https://photos.google.com/albums" class="link-item" target="_blank">
+              <i class="fab fa-google"></i> Google Photos
+            </a>
+            <a href="http://photos.wenceslaugraus.com" class="link-item" target="_blank">
+              <i class="fas fa-camera"></i> Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Five -->
-		<section class="wrapper style1 align-center invert">
-			<div class="inner">
-				<h2>Adventure awaits</h2>
-				<p>There are so many possibilities ways out there to discover new mountains to climb, and so many new
-					virgin trails that need to be trekked upon.</p>
-			</div>
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">03 / Gallery</span>
+        <h2>Adventure <span class="accent">awaits</span></h2>
+        <p class="section-desc">Mountains of Catalonia and the Pyrenees</p>
+      </div>
+      <div class="gallery-grid" data-reveal>
+        <div class="gallery-item" data-parallax="0.08">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/01.webp" alt="Aneto" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Aneto</h4>
+            <p>The colossus of the Pyrenees</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.12">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/02.webp" alt="Pedraforca" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Pedraforca</h4>
+            <p>Most emblematic mountain in Catalonia</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.06">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/03.webp" alt="Pica d'Estats" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Pica d'Estats</h4>
+            <p>Highest mountain in Catalonia</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.1">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/04.webp" alt="Montserrat" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Montserrat</h4>
+            <p>The magic mountain</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.09">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/05.webp" alt="Monegros Desert" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Monegros Desert</h4>
+            <p>The semidesert in Aragon</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.07">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/06.webp" alt="Posets" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Posets</h4>
+            <p>Second highest peak of the Pyrenees</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.11">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/07.webp" alt="Montsec" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Montsec</h4>
+            <p>Most beautiful sky in Catalonia</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.05">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/08.webp" alt="Puigmal" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Puigmal</h4>
+            <p>Popular mountain in Catalonia</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.1">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/09.webp" alt="Vallibierna" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Vallibierna</h4>
+            <p>Natural Park of Posets-Maladeta</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.08">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/10.webp" alt="Depresio Central" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Depresio Central</h4>
+            <p>Beautiful villages surrounded by green fields</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.06">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/11.webp" alt="Valle de Pineta" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Valle de Pineta</h4>
+            <p>Craggy peaks, waterfalls, fairytale pine woods</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-parallax="0.09">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/gallery/thumbs/12.webp" alt="Aiguestortes" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>Aiguestortes</h4>
+            <p>Crystal-clear waters running through many lakes and rivers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-			<!-- Gallery -->
-			<div class="gallery style1 medium lightbox onscroll-fade-in">
-				<article>
-					<a href="images/gallery/fulls/01.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/01.webp" alt="01" />
-					</a>
-					<div class="caption">
-						<h3>Aneto</h3>
-						<p>The colossus of the pyrenees</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/02.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/02.webp" alt="02" />
-					</a>
-					<div class="caption">
-						<h3>Pedraforca</h3>
-						<p>The most famous and emblematic mountains in Catalonia.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/03.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/03.webp" alt="03" />
-					</a>
-					<div class="caption">
-						<h3>Pica d'Estats</h3>
-						<p>The highest mountain in Catalonia.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/04.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/04.webp" alt="4" />
-					</a>
-					<div class="caption">
-						<h3>Montserrat</h3>
-						<p>The magic mountain.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/05.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/05.webp" alt="5" />
-					</a>
-					<div class="caption">
-						<h3>Monegros Desert</h3>
-						<p>The semidesert in Aragón, northeastern Spain.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/06.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/06.webp" alt="6" />
-					</a>
-					<div class="caption">
-						<h3>Posets</h3>
-						<p>The second highest peak of the Pyrenees, after Aneto.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/07.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/07.webp" alt="7" />
-					</a>
-					<div class="caption">
-						<h3>Montsec</h3>
-						<p>The Montsec region has the most beautiful sky in Catalonia.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/08.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/08.webp" alt="8" />
-					</a>
-					<div class="caption">
-						<h3>Puigmal</h3>
-						<p>One of the more popular mountains in Catalonia.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/09.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/09.webp" alt="9" />
-					</a>
-					<div class="caption">
-						<h3>Vallibierna</h3>
-						<p>Natural Park of Posets-Maladeta</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/10.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/10.webp" alt="10" />
-					</a>
-					<div class="caption">
-						<h3>Depresió Central</h3>
-						<p>Beautiful villages surrounded by green fields</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/11.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/11.webp" alt="11" />
-					</a>
-					<div class="caption">
-						<h3>Valle de Pineta</h3>
-						<p>Spectacular craggy peaks, beautiful waterfalls, fairytale pine woods.</p>
-					</div>
-				</article>
-				<article>
-					<a href="images/gallery/fulls/12.webp" class="image">
-						<img src="data:image/png;base64,r0lgodlhaqabaad/acwaaaaaaqabaaacads=" data-src="images/gallery/thumbs/12.webp" alt="12" />
-					</a>
-					<div class="caption">
-						<h3>Aigüestortes</h3>
-						<p>This park is characterised by its crystal-clear waters that run through its many lakes and
-							rivers.</p>
-					</div>
-				</article>
-			</div>
+  <section class="section section-dark" id="tech">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">04 / Tech Stack</span>
+        <h2>Technologies I <span class="accent">work with</span></h2>
+        <p class="section-desc">Full-stack capabilities from frontend to AI-driven automation</p>
+      </div>
+      <div class="tech-grid" data-reveal>
 
-		</section>
+        <div class="tech-category">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon"><i class="fas fa-palette"></i></div>
+            <div>
+              <h3>Frontend</h3>
+              <p>Interfaces & user experiences</p>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+            <span class="tech-tag"><i class="fas fa-code"></i> TypeScript</span>
+          </div>
+        </div>
 
-		<!-- Six -->
-		<section class="wrapper style1 align-center invert color1">
-			<div class="inner">
-				<h2>Some projects</h2>
-				<div class="items style1 medium onscroll-fade-in">
-					<section>
-						<span class="icon style2 major fa-map-pin"></span>
-						<h3>100 Cims</h3>
-						<p>The list of the most iconic peaks in Catalonia.</p>
-						<ul class="actions stacked">
-							<li><a href="http://100cims.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-					<section>
-						<span class="icon style2 major fa-leaf"></span>
-						<h3>Espais Naturals</h3>
-						<p>Various natural areas of Catalonia.</p>
-						<ul class="actions stacked">
-							<li><a href="http://coves.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-					<section>
-						<span class="icon style2 major fa-map-marker"></span>
-						<h3>Coves</h3>
-						<p>Different cavities of Catalonia.</p>
-						<ul class="actions stacked">
-							<li><a href="http://espaisnaturals.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-					<section>
-						<span class="icon style2 major fa-map"></span>
-						<h3>Distance</h3>
-						<p>Google Maps distance calculator can find the distance between two or more points on a map</p>
-						<ul class="actions stacked">
-							<li><a href="http://distance.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-					<section>
-						<span class="icon style2 major fa-map-signs"></span>
-						<h3>Perduts</h3>
-						<p>Perduts is a geography game. Challenges your ability to recognize your surroundings.</p>
-						<ul class="actions stacked">
-							<li><a href="http://perduts.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-					<section>
-						<span class="icon style2 major fa-desktop"></span>
-						<h3>Buscador ICC</h3>
-						<p>Find on a map the place names of the ICC.</p>
-						<ul class="actions stacked">
-							<li><a href="http://buscadoricc.wenceslaugraus.com/" class="button">View</a></li>
-						</ul>
-					</section>
-				</div>
-			</div>
-		</section>
+        <div class="tech-category">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon"><i class="fas fa-server"></i></div>
+            <div>
+              <h3>Backend & Databases</h3>
+              <p>Logic, APIs & data persistence</p>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-tag"><i class="fas fa-database"></i> SQL</span>
+            <span class="tech-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+          </div>
+        </div>
 
-		<!-- Footer -->
-		<footer class="wrapper style1 align-center invert">
-			<div class="inner">
-				<ul class="icons">
-					<li><a href="https://twitter.com/TecnoFes" aria-label="twitter" class="icon style2 fa-twitter"><span
-								class="label">Twitter</span></a></li>
-					<li><a href="https://www.facebook.com/wenceslau.graus" aria-label="facebook" class="icon style2 fa-facebook"><span
-								class="label">Facebook</span></a></li>
-					<li><a href="https://www.instagram.com/elgranviatge/" aria-label="instagram" class="icon style2 fa-instagram"><span
-								class="label">Instagram</span></a></li>
-					<li><a href="https://www.linkedin.com/in/wenceslaugraus/" aria-label="linkedin" class="icon style2 fa-linkedin"><span
-								class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:wgraus@gmail.com" aria-label="email" class="icon style2 fa-envelope"><span
-								class="label">Email</span></a></li>
-				</ul>
-				<p>&copy; Wenceslau Graus<br /><a href="https://wwww.wenceslaugraus.com">www.wenceslaugraus.com</a></p>
-			</div>
-		</footer>
-	</div>
+        <div class="tech-category">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>Tools & DevOps</h3>
+              <p>Automation, versioning & deployment</p>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag"><i class="fas fa-code"></i> Bash</span>
+            <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+          </div>
+        </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+        <div class="tech-category">
+          <div class="tech-cat-header">
+            <div class="tech-cat-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h3>AI & Automation</h3>
+              <p>Intelligent systems & agentic workflows</p>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag"><i class="fas fa-wand-magic-sparkles"></i> AI / ML</span>
+            <span class="tech-tag"><i class="fas fa-robot"></i> Agents</span>
+            <span class="tech-tag"><i class="fas fa-plug"></i> MCP</span>
+            <span class="tech-tag"><i class="fas fa-language"></i> LLMs</span>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p class="hero-tag" data-reveal>Get in touch</p>
+      <h2 class="footer-name" data-reveal>Wenceslau <span class="accent">Graus</span></h2>
+      <p class="footer-tagline" data-reveal>Always exploring. Always building.</p>
+      <div class="social-links" data-reveal>
+        <a href="https://twitter.com/TecnoFes" class="social-link" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/wenceslau.graus" class="social-link" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/elgranviatge/" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/wenceslaugraus/" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.strava.com/athletes/wenceslau_graus" class="social-link" target="_blank" aria-label="Strava"><i class="fab fa-strava"></i></a>
+        <a href="mailto:wgraus@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2024 Wenceslau Graus &mdash; <a href="https://www.wenceslaugraus.com">www.wenceslaugraus.com</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/portfolio.js"></script>
 </body>
-
 </html>
