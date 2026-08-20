@@ -161,14 +161,14 @@ img{display:block;max-width:100%;height:auto}
 .track-card:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
 .track-svg{width:100%;height:200px;margin-bottom:1rem}
 .track-label{text-align:center;font-family:var(--font);font-size:0.85rem;font-weight:500;color:var(--fg-muted);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.5rem}
-.track-1-bg,.track-2-bg{stroke:rgba(255,255,255,0.06);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 3s cubic-bezier(0.16,1,0.3,1)}
-.track-1-line{stroke:url(#track-gradient-1);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 3s cubic-bezier(0.16,1,0.3,1)}
-.track-2-line{stroke:url(#track-gradient-2);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 3s cubic-bezier(0.16,1,0.3,1)}
+.track-1-bg,.track-2-bg{stroke:rgba(255,255,255,0.06);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
+.track-1-line{stroke:url(#track-gradient-1);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
+.track-2-line{stroke:url(#track-gradient-2);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
 .track-1-dot,.track-2-dot{fill:var(--accent);opacity:0;transition:opacity 0.5s 0.3s}
 .track-1-dot.animated,.track-2-dot.animated{opacity:1}
 .track-1-dot-end,.track-2-dot-end{fill:var(--accent2);opacity:0;transition:opacity 0.5s 2.2s}
 .track-1-dot-end.animated,.track-2-dot-end.animated{opacity:1}
-.track-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.track-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .track-stat{text-align:center;padding:1rem 0.75rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);transition:all 0.3s}
 .track-stat:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
 .track-stat-icon{display:block;font-size:1.1rem;color:var(--accent);margin-bottom:0.5rem}
