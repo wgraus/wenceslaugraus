@@ -407,3 +407,151 @@
   draw();
   window.addEventListener('resize', function(){ resize(); init(); });
 })();
+
+// ── Terminal typing animation ──
+(function(){
+  var body = document.getElementById('terminal-body');
+  if(!body) return;
+
+  var sequences = [
+    {type:'cmd', text:'boot --dev-env', delay:0},
+    {type:'line', cls:'dim', text:'[init] Loading workspace...', delay:600},
+    {type:'line', cls:'dim', text:'[init] Configuring neural pipelines...', delay:500},
+    {type:'blank', delay:400},
+    {type:'line', cls:'accent bold', text:'$ Loading GPT-4o model...', delay:300},
+    {type:'thinking', cls:'info', text:'Thinking', duration:2200},
+    {type:'line', cls:'success', text:'  GPT-4o loaded. 1.8T params ready.', delay:200},
+    {type:'blank', delay:300},
+    {type:'line', cls:'accent bold', text:'$ Loading Grok-3...', delay:300},
+    {type:'thinking', cls:'grok', text:'Thinking', duration:1800},
+    {type:'line', cls:'success', text:'  Grok-3 loaded. Real-time X data enabled.', delay:200},
+    {type:'blank', delay:300},
+    {type:'line', cls:'accent bold', text:'$ Loading Claude Opus 4...', delay:300},
+    {type:'thinking', cls:'claude', text:'Thinking', duration:2500},
+    {type:'line', cls:'success', text:'  Claude Opus 4 loaded. Extended thinking active.', delay:200},
+    {type:'blank', delay:400},
+    {type:'line', cls:'accent bold', text:'$ python deploy.py --production', delay:400},
+    {type:'line', cls:'dim', text:'  Building optimized bundle...', delay:600},
+    {type:'line', cls:'dim', text:'  Running 847 tests...', delay:800},
+    {type:'line', cls:'success bold', text:'  All tests passed.', delay:300},
+    {type:'line', cls:'dim', text:'  Deploying to edge nodes...', delay:500},
+    {type:'line', cls:'success bold', text:'  Deployed in 3 regions.', delay:300},
+    {type:'blank', delay:400},
+    {type:'line', cls:'accent bold', text:'$ neofetch', delay:300},
+    {type:'line', cls:'', text:'  OS: Developer      CPU: Caffeine x86_64', delay:200},
+    {type:'line', cls:'', text:'  Shell: bash         Uptime: 10,000+ commits', delay:200},
+    {type:'line', cls:'', text:'  Languages: JS, TS, Python, Bash', delay:200},
+    {type:'blank', delay:500},
+    {type:'line', cls:'success bold', text:'> System ready. Awaiting instructions...', delay:0},
+  ];
+
+  var started = false;
+  var currentLine = null;
+  var currentSpan = null;
+
+  function addLine(cls, isCmd){
+    var div = document.createElement('div');
+    div.className = 'terminal-line';
+    if(isCmd){
+      div.innerHTML = '<span class="terminal-prompt">$</span> ';
+    }
+    var span = document.createElement('span');
+    span.className = 'terminal-text' + (cls ? ' ' + cls : '');
+    div.appendChild(span);
+    body.appendChild(div);
+    return span;
+  }
+
+  function addBlank(){
+    var div = document.createElement('div');
+    div.className = 'terminal-line';
+    div.innerHTML = '&nbsp;';
+    body.appendChild(div);
+  }
+
+  function scrollBottom(){
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function typeText(span, text, charDelay, callback){
+    var i = 0;
+    function next(){
+      if(i < text.length){
+        span.textContent += text[i];
+        i++;
+        scrollBottom();
+        setTimeout(next, charDelay + Math.random() * 20);
+      } else {
+        callback();
+      }
+    }
+    next();
+  }
+
+  function runThinking(span, label, duration, callback){
+    var dots = 0;
+    span.textContent = label;
+    var dotsSpan = document.createElement('span');
+    dotsSpan.className = 'thinking-dots';
+    span.appendChild(dotsSpan);
+    var interval = setInterval(function(){
+      dots = (dots + 1) % 4;
+      dotsSpan.textContent = '.'.repeat(dots);
+      scrollBottom();
+    }, 400);
+    setTimeout(function(){
+      clearInterval(interval);
+      span.textContent = label + '...';
+      callback();
+    }, duration);
+  }
+
+  function runSequence(index){
+    if(index >= sequences.length){
+      var cursor = body.querySelector('.terminal-cursor');
+      if(cursor) cursor.style.display = 'none';
+      return;
+    }
+    var step = sequences[index];
+    setTimeout(function(){
+      switch(step.type){
+        case 'cmd':
+          var span = addLine('', true);
+          typeText(span, step.text, 45, function(){ runSequence(index + 1); });
+          break;
+        case 'line':
+          var span = addLine(step.cls, false);
+          typeText(span, step.text, 18, function(){ runSequence(index + 1); });
+          break;
+        case 'thinking':
+          var span = addLine(step.cls, false);
+          runThinking(span, step.text, step.duration, function(){ runSequence(index + 1); });
+          break;
+        case 'blank':
+          addBlank();
+          runSequence(index + 1);
+          break;
+      }
+    }, step.delay);
+  }
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting && !started){
+        started = true;
+        body.innerHTML = '';
+        var cursor = document.createElement('span');
+        cursor.className = 'terminal-cursor';
+        cursor.textContent = '_';
+        var initLine = document.createElement('div');
+        initLine.className = 'terminal-line';
+        initLine.appendChild(cursor);
+        body.appendChild(initLine);
+        currentLine = initLine;
+        setTimeout(function(){ runSequence(0); }, 500);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.3});
+  observer.observe(body.closest('.terminal-wrapper'));
+})();

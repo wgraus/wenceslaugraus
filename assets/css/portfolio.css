@@ -175,6 +175,34 @@ img{display:block;max-width:100%;height:auto}
 .track-stat-val{display:block;font-family:var(--font);font-weight:700;font-size:1rem;color:var(--fg);margin-bottom:0.2rem}
 .track-stat-lbl{display:block;font-size:0.7rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.08em}
 
+/* Terminal */
+.terminal-wrapper{max-width:700px;margin:0 auto}
+.terminal{background:rgba(0,0,0,0.5);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;font-family:'SF Mono','Fira Code','Cascadia Code',monospace}
+.terminal-header{display:flex;align-items:center;gap:0.75rem;padding:0.85rem 1.25rem;background:rgba(255,255,255,0.04);border-bottom:1px solid var(--glass-border)}
+.terminal-dots{display:flex;gap:6px}
+.terminal-dot{width:10px;height:10px;border-radius:50%}
+.terminal-dot-red{background:#ff5f57}
+.terminal-dot-yellow{background:#febc2e}
+.terminal-dot-green{background:#28c840}
+.terminal-title{font-size:0.75rem;color:var(--fg-muted);letter-spacing:0.03em}
+.terminal-body{padding:1.25rem 1.5rem;min-height:280px;max-height:350px;overflow-y:auto;scroll-behavior:smooth}
+.terminal-line{margin-bottom:0.4rem;font-size:0.82rem;line-height:1.6;display:flex;flex-wrap:wrap;gap:0 0.35rem}
+.terminal-prompt{color:var(--accent);font-weight:600;margin-right:0.35rem;user-select:none}
+.terminal-cursor{color:var(--accent);animation:blink 0.8s step-end infinite;font-weight:600}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.terminal-text{color:var(--fg)}
+.terminal-text.dim{color:var(--fg-muted)}
+.terminal-text.accent{color:var(--accent)}
+.terminal-text.warn{color:#febc2e}
+.terminal-text.error{color:#ff5f57}
+.terminal-text.success{color:#28c840}
+.terminal-text.info{color:var(--accent2)}
+.terminal-text.bold{font-weight:700}
+.terminal-text.ml{color:#a78bfa}
+.terminal-text.grok{color:#1da1f2}
+.terminal-text.claude{color:#d97706}
+.terminal-line .thinking-dots{display:inline-block;min-width:2.5em}
+
 /* Reveal animations */
 [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
 [data-reveal].revealed{opacity:1;transform:translateY(0)}
