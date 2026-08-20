@@ -161,9 +161,9 @@ img{display:block;max-width:100%;height:auto}
 .track-card:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
 .track-svg{width:100%;height:200px;margin-bottom:1rem}
 .track-label{text-align:center;font-family:var(--font);font-size:0.85rem;font-weight:500;color:var(--fg-muted);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.5rem}
-.track-1-bg,.track-2-bg{stroke:rgba(255,255,255,0.06);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
-.track-1-line{stroke:url(#track-gradient-1);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
-.track-2-line{stroke:url(#track-gradient-2);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 6s cubic-bezier(0.16,1,0.3,1)}
+.track-1-bg,.track-2-bg{stroke:rgba(255,255,255,0.06);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 10s cubic-bezier(0.16,1,0.3,1)}
+.track-1-line{stroke:url(#track-gradient-1);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 10s cubic-bezier(0.16,1,0.3,1)}
+.track-2-line{stroke:url(#track-gradient-2);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 10s cubic-bezier(0.16,1,0.3,1)}
 .track-1-dot,.track-2-dot{fill:var(--accent);opacity:0;transition:opacity 0.5s 0.3s}
 .track-1-dot.animated,.track-2-dot.animated{opacity:1}
 .track-1-dot-end,.track-2-dot-end{fill:var(--accent2);opacity:0;transition:opacity 0.5s 2.2s}
