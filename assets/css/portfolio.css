@@ -154,6 +154,23 @@ img{display:block;max-width:100%;height:auto}
 .footer-copy{color:var(--fg-muted);font-size:0.8rem}
 .footer-copy a{color:var(--accent);text-decoration:none}
 
+/* Personal Section - Track */
+.image-frame-square{aspect-ratio:1}
+.track-wrapper{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--glass-border)}
+.track-svg{width:100%;height:120px;margin-bottom:2.5rem}
+.track-bg{stroke:rgba(255,255,255,0.06);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 3s cubic-bezier(0.16,1,0.3,1)}
+.track-line{stroke:url(#track-gradient);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 3s cubic-bezier(0.16,1,0.3,1)}
+.track-dot{fill:var(--accent);opacity:0;transition:opacity 0.5s 0.3s}
+.track-dot.animated{opacity:1}
+.track-dot-end{fill:var(--accent2);opacity:0;transition:opacity 0.5s 2.2s}
+.track-dot-end.animated{opacity:1}
+.track-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.track-stat{text-align:center;padding:1.25rem 1rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);transition:all 0.3s}
+.track-stat:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
+.track-stat-icon{display:block;font-size:1.2rem;color:var(--accent);margin-bottom:0.6rem}
+.track-stat-val{display:block;font-family:var(--font);font-weight:700;font-size:1.15rem;color:var(--fg);margin-bottom:0.2rem}
+.track-stat-lbl{display:block;font-size:0.75rem;color:var(--fg-muted);text-transform:uppercase;letter-spacing:0.08em}
+
 /* Reveal animations */
 [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
 [data-reveal].revealed{opacity:1;transform:translateY(0)}
@@ -178,6 +195,7 @@ img{display:block;max-width:100%;height:auto}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
   .tech-grid{grid-template-columns:1fr}
   .about-stats{gap:2rem}
+  .track-stats{grid-template-columns:repeat(2,1fr)}
   .lightbox-prev{left:10px}
   .lightbox-next{right:10px}
   .lightbox-nav{width:38px;height:38px;background:rgba(10,10,15,0.8);backdrop-filter:blur(8px)}
