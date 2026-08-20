@@ -233,35 +233,44 @@
 
 // ── Track draw animation ──
 (function(){
-  var trackLine = document.querySelector('.track-line');
-  var trackBg = document.querySelector('.track-bg');
-  var trackWrapper = document.querySelector('.track-wrapper');
-  if(!trackLine || !trackWrapper) return;
+  var trackPairs = [
+    {bg: '.track-1-bg', line: '.track-1-line', dots: '.track-1-dot, .track-1-dot-end'},
+    {bg: '.track-2-bg', line: '.track-2-line', dots: '.track-2-dot, .track-2-dot-end'}
+  ];
+  var tracksGrid = document.querySelector('.tracks-grid');
+  if(!tracksGrid) return;
 
-  var length = trackLine.getTotalLength();
-  trackLine.style.strokeDasharray = length;
-  trackLine.style.strokeDashoffset = length;
+  trackPairs.forEach(function(pair){
+    var line = document.querySelector(pair.line);
+    var bg = document.querySelector(pair.bg);
+    if(!line) return;
 
-  var bgLength = 0;
-  if(trackBg){
-    bgLength = trackBg.getTotalLength();
-    trackBg.style.strokeDasharray = bgLength;
-    trackBg.style.strokeDashoffset = bgLength;
-  }
+    var length = line.getTotalLength();
+    line.style.strokeDasharray = length;
+    line.style.strokeDashoffset = length;
 
-  var dots = document.querySelectorAll('.track-dot, .track-dot-end');
+    if(bg){
+      var bgLength = bg.getTotalLength();
+      bg.style.strokeDasharray = bgLength;
+      bg.style.strokeDashoffset = bgLength;
+    }
+  });
 
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){
-        trackLine.style.strokeDashoffset = '0';
-        if(trackBg) trackBg.style.strokeDashoffset = '0';
-        dots.forEach(function(d){ d.classList.add('animated'); });
+        trackPairs.forEach(function(pair){
+          var line = document.querySelector(pair.line);
+          var bg = document.querySelector(pair.bg);
+          if(line) line.style.strokeDashoffset = '0';
+          if(bg) bg.style.strokeDashoffset = '0';
+          document.querySelectorAll(pair.dots).forEach(function(d){ d.classList.add('animated'); });
+        });
         observer.unobserve(entry.target);
       }
     });
-  }, {threshold: 0.3});
-  observer.observe(trackWrapper);
+  }, {threshold: 0.2});
+  observer.observe(tracksGrid);
 })();
 
 // ── Hero constellation ──

@@ -137,7 +137,8 @@
         <div class="about-text" data-reveal>
           <span class="section-label">02 / Me</span>
           <h2>Built to<br /><span class="accent">explore</span></h2>
-          <p>Based in Bellpuig, a small town in the Lleida region of Catalonia. By day, I'm a backend developer at
+          <p>Based in <strong>Bellpuig</strong>, a small town in the Lleida region of Catalonia. By day, I'm a backend
+            developer at
             BonArea in Guissona, building the systems that keep things running. When the workday ends, you'll find me
             out on the trails &mdash; running or cycling through the backroads and paths of the Catalan countryside.</p>
           <p>I race trail marathons and backyard ultras, chasing horizons one step at a time. The trails teach
@@ -147,45 +148,92 @@
               rel="noopener noreferrer">
               <i class="fab fa-strava" aria-hidden="true"></i> Strava
             </a>
+            <a href="https://es.wikiloc.com/wikiloc/user.do?id=262680" class="link-item" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fas fa-map-marked-alt" aria-hidden="true"></i> Wikiloc
+            </a>
           </div>
         </div>
       </div>
-      <div class="track-wrapper" data-reveal>
-        <svg class="track-svg" viewBox="0 0 800 300" fill="none" aria-hidden="true" role="presentation">
-          <defs>
-            <linearGradient id="track-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#fc4c02" />
-              <stop offset="50%" stop-color="#00d4aa" />
-              <stop offset="100%" stop-color="#7b61ff" />
-            </linearGradient>
-          </defs>
-          <path class="track-bg"
-            d="M 264.8,48.3 L 272.2,40.9 L 287,56.5 L 302,65.8 L 323,70.4 L 316.5,79.3 L 314.6,85 L 314.7,97.4 L 323.7,104.2 L 324.4,111.2 L 321,114.1 L 316.3,115.9 L 308.5,130.9 L 295.9,134.3 L 285.2,130.3 L 275.8,147.4 L 283.9,151.6 L 292.7,157.3 L 301.4,162.7 L 310.3,167.1 L 325.6,171.9 L 341.3,182 L 351.3,187.5 L 358,190.5 L 365.4,191.1 L 381.9,182.7 L 392.9,196.8 L 391,207.3 L 392.1,216.5 L 392,231.7 L 394.5,250.4 L 411.9,252.6 L 430.8,256.3 L 450.7,257.6 L 468.2,258.2 L 488.9,258.1 L 515.4,259.6 L 535.2,257.8 L 507.5,244.9 L 497.8,236.1 L 491.3,229.3 L 479.2,220.3 L 459.7,212.9 L 445.8,217.1 L 432.2,212.6 L 431.1,202.8 L 418.4,186.9 L 404.4,175.3 L 394.2,176 L 381.9,181.8 L 369.9,167.6 L 360.2,154.4 L 348.8,139.8 L 354.1,132.3 L 351,122.9 L 348.5,117.1 L 350.5,111.6 L 340.9,105.7 L 322.2,94.7 L 313.1,88.4 L 314,82.9 L 323.8,70.7 L 304.7,66.5 L 285.4,53.8 L 274.1,41.8 L 264.8,48.3" />
-          <path class="track-line"
-            d="M 264.8,48.3 L 272.2,40.9 L 287,56.5 L 302,65.8 L 323,70.4 L 316.5,79.3 L 314.6,85 L 314.7,97.4 L 323.7,104.2 L 324.4,111.2 L 321,114.1 L 316.3,115.9 L 308.5,130.9 L 295.9,134.3 L 285.2,130.3 L 275.8,147.4 L 283.9,151.6 L 292.7,157.3 L 301.4,162.7 L 310.3,167.1 L 325.6,171.9 L 341.3,182 L 351.3,187.5 L 358,190.5 L 365.4,191.1 L 381.9,182.7 L 392.9,196.8 L 391,207.3 L 392.1,216.5 L 392,231.7 L 394.5,250.4 L 411.9,252.6 L 430.8,256.3 L 450.7,257.6 L 468.2,258.2 L 488.9,258.1 L 515.4,259.6 L 535.2,257.8 L 507.5,244.9 L 497.8,236.1 L 491.3,229.3 L 479.2,220.3 L 459.7,212.9 L 445.8,217.1 L 432.2,212.6 L 431.1,202.8 L 418.4,186.9 L 404.4,175.3 L 394.2,176 L 381.9,181.8 L 369.9,167.6 L 360.2,154.4 L 348.8,139.8 L 354.1,132.3 L 351,122.9 L 348.5,117.1 L 350.5,111.6 L 340.9,105.7 L 322.2,94.7 L 313.1,88.4 L 314,82.9 L 323.8,70.7 L 304.7,66.5 L 285.4,53.8 L 274.1,41.8 L 264.8,48.3" />
-          <circle class="track-dot" cx="264.8" cy="48.3" r="6" />
-          <circle class="track-dot-end" cx="264.8" cy="48.3" r="7" />
-        </svg>
-        <div class="track-stats">
-          <div class="track-stat">
-            <span class="track-stat-icon"><i class="fas fa-route" aria-hidden="true"></i></span>
-            <span class="track-stat-val">4.167 mi</span>
-            <span class="track-stat-lbl">Backyard distance</span>
+      <div class="tracks-grid" data-reveal>
+        <div class="track-card">
+          <svg class="track-svg" viewBox="0 0 800 300" fill="none" aria-hidden="true" role="presentation">
+            <defs>
+              <linearGradient id="track-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fc4c02" />
+                <stop offset="50%" stop-color="#00d4aa" />
+                <stop offset="100%" stop-color="#7b61ff" />
+              </linearGradient>
+            </defs>
+            <path class="track-1-bg"
+              d="M 264.8,48.3 L 272.2,40.9 L 287,56.5 L 302,65.8 L 323,70.4 L 316.5,79.3 L 314.6,85 L 314.7,97.4 L 323.7,104.2 L 324.4,111.2 L 321,114.1 L 316.3,115.9 L 308.5,130.9 L 295.9,134.3 L 285.2,130.3 L 275.8,147.4 L 283.9,151.6 L 292.7,157.3 L 301.4,162.7 L 310.3,167.1 L 325.6,171.9 L 341.3,182 L 351.3,187.5 L 358,190.5 L 365.4,191.1 L 381.9,182.7 L 392.9,196.8 L 391,207.3 L 392.1,216.5 L 392,231.7 L 394.5,250.4 L 411.9,252.6 L 430.8,256.3 L 450.7,257.6 L 468.2,258.2 L 488.9,258.1 L 515.4,259.6 L 535.2,257.8 L 507.5,244.9 L 497.8,236.1 L 491.3,229.3 L 479.2,220.3 L 459.7,212.9 L 445.8,217.1 L 432.2,212.6 L 431.1,202.8 L 418.4,186.9 L 404.4,175.3 L 394.2,176 L 381.9,181.8 L 369.9,167.6 L 360.2,154.4 L 348.8,139.8 L 354.1,132.3 L 351,122.9 L 348.5,117.1 L 350.5,111.6 L 340.9,105.7 L 322.2,94.7 L 313.1,88.4 L 314,82.9 L 323.8,70.7 L 304.7,66.5 L 285.4,53.8 L 274.1,41.8 L 264.8,48.3" />
+            <path class="track-1-line"
+              d="M 264.8,48.3 L 272.2,40.9 L 287,56.5 L 302,65.8 L 323,70.4 L 316.5,79.3 L 314.6,85 L 314.7,97.4 L 323.7,104.2 L 324.4,111.2 L 321,114.1 L 316.3,115.9 L 308.5,130.9 L 295.9,134.3 L 285.2,130.3 L 275.8,147.4 L 283.9,151.6 L 292.7,157.3 L 301.4,162.7 L 310.3,167.1 L 325.6,171.9 L 341.3,182 L 351.3,187.5 L 358,190.5 L 365.4,191.1 L 381.9,182.7 L 392.9,196.8 L 391,207.3 L 392.1,216.5 L 392,231.7 L 394.5,250.4 L 411.9,252.6 L 430.8,256.3 L 450.7,257.6 L 468.2,258.2 L 488.9,258.1 L 515.4,259.6 L 535.2,257.8 L 507.5,244.9 L 497.8,236.1 L 491.3,229.3 L 479.2,220.3 L 459.7,212.9 L 445.8,217.1 L 432.2,212.6 L 431.1,202.8 L 418.4,186.9 L 404.4,175.3 L 394.2,176 L 381.9,181.8 L 369.9,167.6 L 360.2,154.4 L 348.8,139.8 L 354.1,132.3 L 351,122.9 L 348.5,117.1 L 350.5,111.6 L 340.9,105.7 L 322.2,94.7 L 313.1,88.4 L 314,82.9 L 323.8,70.7 L 304.7,66.5 L 285.4,53.8 L 274.1,41.8 L 264.8,48.3" />
+            <circle class="track-1-dot" cx="264.8" cy="48.3" r="6" />
+            <circle class="track-1-dot-end" cx="264.8" cy="48.3" r="7" />
+          </svg>
+          <p class="track-label">Bellpuig Espaseta Backyard Ultra</p>
+          <div class="track-stats">
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-route" aria-hidden="true"></i></span>
+              <span class="track-stat-val">4.167 mi</span>
+              <span class="track-stat-lbl">Backyard distance</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-mountain" aria-hidden="true"></i></span>
+              <span class="track-stat-val">70.839 mi</span>
+              <span class="track-stat-lbl">Total distance</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-stopwatch" aria-hidden="true"></i></span>
+              <span class="track-stat-val">17 loops</span>
+              <span class="track-stat-lbl">Best Time</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-fire" aria-hidden="true"></i></span>
+              <span class="track-stat-val">Backyard</span>
+              <span class="track-stat-lbl">Ultra Format</span>
+            </div>
           </div>
-          <div class="track-stat">
-            <span class="track-stat-icon"><i class="fas fa-mountain" aria-hidden="true"></i></span>
-            <span class="track-stat-val">62.505 mi</span>
-            <span class="track-stat-lbl">Total distance</span>
-          </div>
-          <div class="track-stat">
-            <span class="track-stat-icon"><i class="fas fa-stopwatch" aria-hidden="true"></i></span>
-            <span class="track-stat-val">15 loops</span>
-            <span class="track-stat-lbl">Best Time</span>
-          </div>
-          <div class="track-stat">
-            <span class="track-stat-icon"><i class="fas fa-fire" aria-hidden="true"></i></span>
-            <span class="track-stat-val">Backyard</span>
-            <span class="track-stat-lbl">Ultra Format</span>
+        </div>
+        <div class="track-card">
+          <svg class="track-svg" viewBox="0 0 400 300" fill="none" aria-hidden="true" role="presentation">
+            <defs>
+              <linearGradient id="track-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fc4c02" />
+                <stop offset="50%" stop-color="#00d4aa" />
+                <stop offset="100%" stop-color="#7b61ff" />
+              </linearGradient>
+            </defs>
+            <path class="track-2-bg"
+              d="M 88.5,209.2 L 94.5,207.3 L 98.3,201.9 L 101.5,196.4 L 104.8,191.3 L 107.8,186.4 L 111.3,181.9 L 116.6,179.6 L 122.9,182.1 L 124.2,188.3 L 129.3,193.2 L 136,195.4 L 142,197.8 L 147.1,202.6 L 150.1,206.9 L 154.8,211.3 L 160,215.8 L 164,220 L 168.5,224.7 L 175.4,225.7 L 182.7,224.7 L 189.3,223.5 L 196.1,220.5 L 201.7,216.8 L 207.2,213 L 211.9,209.3 L 219,207.1 L 228.2,210.7 L 234.4,214.6 L 241.8,212 L 245.8,209 L 242.5,214.9 L 241.2,220.4 L 244.1,226.2 L 246.8,231 L 252,235.8 L 257.2,240.2 L 262.1,244.1 L 267.4,247.5 L 274.7,245.8 L 281.4,246.9 L 288.7,247 L 294.5,244.5 L 302.7,241.7 L 311.8,241.2 L 319.9,240.4 L 329.1,239.4 L 338.9,238.8 L 347.9,237.4 L 356.8,235.7 L 356.7,232.1 L 348.7,229.6 L 341.3,226.4 L 333.5,223.8 L 325.5,221.8 L 317.6,220.1 L 309.8,217.7 L 302.1,215.7 L 294.3,213.6 L 286.4,211.9 L 279.2,210.6 L 271.3,209 L 264.6,205.8 L 258.5,200.9 L 251.1,198.6 L 243.3,197.8 L 235.5,197 L 228,195.1 L 220.6,194.4 L 213.3,193.8 L 204.6,191.6 L 197.5,189 L 191.5,185.3 L 185.4,181.2 L 179.8,177.4 L 174.3,173.3 L 170.2,168.4 L 164.2,164.3 L 156.9,162.5 L 149.3,161 L 141.9,158.9 L 137.2,153.8 L 131.3,150.8 L 127.3,155.3 L 123.1,151.4 L 128.4,148.5 L 134,147.4 L 133.2,142.1 L 139.9,140.7 L 145.4,137.1 L 150.5,132.3 L 152.7,125.3 L 154.3,119.8 L 155.5,114 L 152.7,108.9 L 147.6,106.2 L 146.2,100.5 L 146.5,94.6 L 145.7,89.4 L 144.3,83 L 142.5,78 L 140.3,72.1 L 138.6,67.1 L 137.1,62.2 L 135.5,56.1 L 131.2,52.6 L 121.8,54.9 L 114,58 L 110.9,62.9 L 108.6,68.6 L 107.6,74.7 L 107.8,80.4 L 105.3,86.3 L 102.7,93.2 L 99.4,98.5 L 95.2,103.5 L 91,109.8 L 87.3,115.2 L 82.7,121.8 L 80.6,129.1 L 76.4,136 L 72.3,140.4 L 66.6,143.9 L 59.3,148.9 L 51.9,154.8 L 46.1,161 L 40,166.9 L 43.2,172.1 L 52.4,171.3 L 62,171.9 L 65.9,177.5 L 73,178.2 L 81.3,177.8 L 89.9,177.3 L 97.4,176.8 L 106.6,177.2 L 107.8,182.2 L 105.4,187.3 L 102.2,192.5 L 99.3,197.6 L 95.8,202.9 L 93.1,207.6 L 86.1,208.3 L 85.7,208.5" />
+            <path class="track-2-line"
+              d="M 88.5,209.2 L 94.5,207.3 L 98.3,201.9 L 101.5,196.4 L 104.8,191.3 L 107.8,186.4 L 111.3,181.9 L 116.6,179.6 L 122.9,182.1 L 124.2,188.3 L 129.3,193.2 L 136,195.4 L 142,197.8 L 147.1,202.6 L 150.1,206.9 L 154.8,211.3 L 160,215.8 L 164,220 L 168.5,224.7 L 175.4,225.7 L 182.7,224.7 L 189.3,223.5 L 196.1,220.5 L 201.7,216.8 L 207.2,213 L 211.9,209.3 L 219,207.1 L 228.2,210.7 L 234.4,214.6 L 241.8,212 L 245.8,209 L 242.5,214.9 L 241.2,220.4 L 244.1,226.2 L 246.8,231 L 252,235.8 L 257.2,240.2 L 262.1,244.1 L 267.4,247.5 L 274.7,245.8 L 281.4,246.9 L 288.7,247 L 294.5,244.5 L 302.7,241.7 L 311.8,241.2 L 319.9,240.4 L 329.1,239.4 L 338.9,238.8 L 347.9,237.4 L 356.8,235.7 L 356.7,232.1 L 348.7,229.6 L 341.3,226.4 L 333.5,223.8 L 325.5,221.8 L 317.6,220.1 L 309.8,217.7 L 302.1,215.7 L 294.3,213.6 L 286.4,211.9 L 279.2,210.6 L 271.3,209 L 264.6,205.8 L 258.5,200.9 L 251.1,198.6 L 243.3,197.8 L 235.5,197 L 228,195.1 L 220.6,194.4 L 213.3,193.8 L 204.6,191.6 L 197.5,189 L 191.5,185.3 L 185.4,181.2 L 179.8,177.4 L 174.3,173.3 L 170.2,168.4 L 164.2,164.3 L 156.9,162.5 L 149.3,161 L 141.9,158.9 L 137.2,153.8 L 131.3,150.8 L 127.3,155.3 L 123.1,151.4 L 128.4,148.5 L 134,147.4 L 133.2,142.1 L 139.9,140.7 L 145.4,137.1 L 150.5,132.3 L 152.7,125.3 L 154.3,119.8 L 155.5,114 L 152.7,108.9 L 147.6,106.2 L 146.2,100.5 L 146.5,94.6 L 145.7,89.4 L 144.3,83 L 142.5,78 L 140.3,72.1 L 138.6,67.1 L 137.1,62.2 L 135.5,56.1 L 131.2,52.6 L 121.8,54.9 L 114,58 L 110.9,62.9 L 108.6,68.6 L 107.6,74.7 L 107.8,80.4 L 105.3,86.3 L 102.7,93.2 L 99.4,98.5 L 95.2,103.5 L 91,109.8 L 87.3,115.2 L 82.7,121.8 L 80.6,129.1 L 76.4,136 L 72.3,140.4 L 66.6,143.9 L 59.3,148.9 L 51.9,154.8 L 46.1,161 L 40,166.9 L 43.2,172.1 L 52.4,171.3 L 62,171.9 L 65.9,177.5 L 73,178.2 L 81.3,177.8 L 89.9,177.3 L 97.4,176.8 L 106.6,177.2 L 107.8,182.2 L 105.4,187.3 L 102.2,192.5 L 99.3,197.6 L 95.8,202.9 L 93.1,207.6 L 86.1,208.3 L 85.7,208.5" />
+            <circle class="track-2-dot" cx="88.5" cy="209.2" r="6" />
+            <circle class="track-2-dot-end" cx="88.5" cy="209.2" r="7" />
+          </svg>
+          <p class="track-label">Guissona Backyard 2025</p>
+          <div class="track-stats">
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-route" aria-hidden="true"></i></span>
+              <span class="track-stat-val">4.167 mi</span>
+              <span class="track-stat-lbl">Backyard distance</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-mountain" aria-hidden="true"></i></span>
+              <span class="track-stat-val">-- mi</span>
+              <span class="track-stat-lbl">Total distance</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-stopwatch" aria-hidden="true"></i></span>
+              <span class="track-stat-val">-- loops</span>
+              <span class="track-stat-lbl">Best Time</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-icon"><i class="fas fa-fire" aria-hidden="true"></i></span>
+              <span class="track-stat-val">Backyard</span>
+              <span class="track-stat-lbl">Ultra Format</span>
+            </div>
           </div>
         </div>
       </div>
@@ -419,6 +467,8 @@
           rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
         <a href="https://www.strava.com/athletes/wenceslau_graus" class="social-link" target="_blank"
           rel="noopener noreferrer" aria-label="Strava"><i class="fab fa-strava" aria-hidden="true"></i></a>
+        <a href="https://es.wikiloc.com/wikiloc/user.do?id=262680" class="social-link" target="_blank"
+          rel="noopener noreferrer" aria-label="Wikiloc"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></a>
         <a href="mailto:wgraus@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"
             aria-hidden="true"></i></a>
       </div>
