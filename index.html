@@ -4,23 +4,37 @@
 <head>
   <title>Wenceslau Graus</title>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Trail Explorer &amp; Developer - Wenceslau Graus" />
   <meta name="author" content="Wenceslau Graus" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="canonical" href="https://www.wenceslaugraus.com/" />
   <meta property="og:title" content="Wenceslau Graus" />
-  <meta property="og:image" content="images/banner.webp" />
   <meta property="og:description" content="Trail Explorer &amp; Developer" />
+  <meta property="og:image" content="https://www.wenceslaugraus.com/images/banner.webp" />
+  <meta property="og:url" content="https://www.wenceslaugraus.com" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Wenceslau Graus" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wenceslau Graus" />
+  <meta name="twitter:description" content="Trail Explorer &amp; Developer" />
+  <meta name="twitter:image" content="https://www.wenceslaugraus.com/images/banner.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
 
 <body>
+
+  <a href="#hero" class="skip-link">Skip to content</a>
 
   <div class="gradient-orb orb-1"></div>
   <div class="gradient-orb orb-2"></div>
@@ -36,13 +50,13 @@
         <a href="#tech">Tech Stack</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
     <a href="#about">About</a>
     <a href="#adventure">Adventure</a>
     <a href="#gallery">Gallery</a>
@@ -51,9 +65,9 @@
   </div>
 
   <section class="hero" id="hero">
-    <canvas class="hero-lines" id="hero-lines"></canvas>
+    <canvas class="hero-lines" id="hero-lines" aria-hidden="true" role="presentation"></canvas>
     <div class="hero-content">
-      <p class="hero-tag" data-reveal>Trail Runner &amp; Developer</p>
+      <p class="hero-tag" data-reveal>Trail Explorer &amp; Developer</p>
       <h1 class="hero-name" data-reveal>
         <span class="name-line">Wenceslau</span>
         <span class="name-line accent">Graus</span>
@@ -98,7 +112,7 @@
         <div class="about-image" data-reveal data-parallax="0.15">
           <div class="image-frame">
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              data-src="images/spotlight001.webp" alt="Trail running in the mountains" loading="lazy" />
+              data-src="images/spotlight001.webp" alt="Trail running in the mountains" width="400" height="500" decoding="async" />
           </div>
         </div>
       </div>
@@ -111,7 +125,7 @@
         <div class="about-image" data-reveal data-parallax="0.15">
           <div class="image-frame">
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              data-src="images/spotlight002.webp" alt="Mountain photography" loading="lazy" />
+              data-src="images/spotlight002.webp" alt="Mountain photography" width="400" height="500" decoding="async" />
           </div>
         </div>
         <div class="about-text" data-reveal>
@@ -121,11 +135,11 @@
             we admit the difference between the images from a camera and the experiences themselves.</p>
           <p>Every summit has a story. Every trail has a lesson. Photography is how I keep those memories alive.</p>
           <div class="link-group">
-            <a href="https://photos.google.com/albums" class="link-item" target="_blank">
-              <i class="fab fa-google"></i> Google Photos
+            <a href="https://photos.google.com/albums" class="link-item" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-google" aria-hidden="true"></i> Google Photos
             </a>
-            <a href="http://photos.wenceslaugraus.com" class="link-item" target="_blank">
-              <i class="fas fa-camera"></i> Portfolio
+            <a href="https://photos.wenceslaugraus.com" class="link-item" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-camera" aria-hidden="true"></i> Portfolio
             </a>
           </div>
         </div>
@@ -141,99 +155,99 @@
         <p class="section-desc">Mountains of Catalonia and the Pyrenees</p>
       </div>
       <div class="gallery-grid" data-reveal>
-        <div class="gallery-item" data-parallax="0.08">
+        <div class="gallery-item" data-parallax="0.08" tabindex="0" role="button" aria-label="View Aneto">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/01.webp" alt="Aneto" loading="lazy" />
+            data-src="images/gallery/thumbs/01.webp" alt="Aneto" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Aneto</h4>
+            <h3>Aneto</h3>
             <p>The colossus of the Pyrenees</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.12">
+        <div class="gallery-item" data-parallax="0.12" tabindex="0" role="button" aria-label="View Pedraforca">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/02.webp" alt="Pedraforca" loading="lazy" />
+            data-src="images/gallery/thumbs/02.webp" alt="Pedraforca" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Pedraforca</h4>
+            <h3>Pedraforca</h3>
             <p>Most emblematic mountain in Catalonia</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.06">
+        <div class="gallery-item" data-parallax="0.06" tabindex="0" role="button" aria-label="View Pica d'Estats">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/03.webp" alt="Pica d'Estats" loading="lazy" />
+            data-src="images/gallery/thumbs/03.webp" alt="Pica d'Estats" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Pica d'Estats</h4>
+            <h3>Pica d'Estats</h3>
             <p>Highest mountain in Catalonia</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.1">
+        <div class="gallery-item" data-parallax="0.1" tabindex="0" role="button" aria-label="View Montserrat">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/04.webp" alt="Montserrat" loading="lazy" />
+            data-src="images/gallery/thumbs/04.webp" alt="Montserrat" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Montserrat</h4>
+            <h3>Montserrat</h3>
             <p>The magic mountain</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.09">
+        <div class="gallery-item" data-parallax="0.09" tabindex="0" role="button" aria-label="View Monegros Desert">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/05.webp" alt="Monegros Desert" loading="lazy" />
+            data-src="images/gallery/thumbs/05.webp" alt="Monegros Desert" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Monegros Desert</h4>
+            <h3>Monegros Desert</h3>
             <p>The semidesert in Aragon</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.07">
+        <div class="gallery-item" data-parallax="0.07" tabindex="0" role="button" aria-label="View Posets">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/06.webp" alt="Posets" loading="lazy" />
+            data-src="images/gallery/thumbs/06.webp" alt="Posets" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Posets</h4>
+            <h3>Posets</h3>
             <p>Second highest peak of the Pyrenees</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.11">
+        <div class="gallery-item" data-parallax="0.11" tabindex="0" role="button" aria-label="View Montsec">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/07.webp" alt="Montsec" loading="lazy" />
+            data-src="images/gallery/thumbs/07.webp" alt="Montsec" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Montsec</h4>
+            <h3>Montsec</h3>
             <p>Most beautiful sky in Catalonia</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.05">
+        <div class="gallery-item" data-parallax="0.05" tabindex="0" role="button" aria-label="View Puigmal">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/08.webp" alt="Puigmal" loading="lazy" />
+            data-src="images/gallery/thumbs/08.webp" alt="Puigmal" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Puigmal</h4>
+            <h3>Puigmal</h3>
             <p>Popular mountain in Catalonia</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.1">
+        <div class="gallery-item" data-parallax="0.1" tabindex="0" role="button" aria-label="View Vallibierna">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/09.webp" alt="Vallibierna" loading="lazy" />
+            data-src="images/gallery/thumbs/09.webp" alt="Vallibierna" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Vallibierna</h4>
+            <h3>Vallibierna</h3>
             <p>Natural Park of Posets-Maladeta</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.08">
+        <div class="gallery-item" data-parallax="0.08" tabindex="0" role="button" aria-label="View Depresio Central">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/10.webp" alt="Depresio Central" loading="lazy" />
+            data-src="images/gallery/thumbs/10.webp" alt="Depresio Central" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Depresio Central</h4>
+            <h3>Depresio Central</h3>
             <p>Beautiful villages surrounded by green fields</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.06">
+        <div class="gallery-item" data-parallax="0.06" tabindex="0" role="button" aria-label="View Valle de Pineta">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/11.webp" alt="Valle de Pineta" loading="lazy" />
+            data-src="images/gallery/thumbs/11.webp" alt="Valle de Pineta" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Valle de Pineta</h4>
+            <h3>Valle de Pineta</h3>
             <p>Craggy peaks, waterfalls, fairytale pine woods</p>
           </div>
         </div>
-        <div class="gallery-item" data-parallax="0.09">
+        <div class="gallery-item" data-parallax="0.09" tabindex="0" role="button" aria-label="View Aiguestortes">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="images/gallery/thumbs/12.webp" alt="Aiguestortes" loading="lazy" />
+            data-src="images/gallery/thumbs/12.webp" alt="Aiguestortes" width="400" height="400" decoding="async" />
           <div class="gallery-overlay">
-            <h4>Aiguestortes</h4>
+            <h3>Aiguestortes</h3>
             <p>Crystal-clear waters running through many lakes and rivers</p>
           </div>
         </div>
@@ -252,65 +266,65 @@
 
         <div class="tech-category">
           <div class="tech-cat-header">
-            <div class="tech-cat-icon"><i class="fas fa-palette"></i></div>
+            <div class="tech-cat-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
             <div>
               <h3>Frontend</h3>
               <p>Interfaces & user experiences</p>
             </div>
           </div>
           <div class="tech-tags">
-            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
-            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
-            <span class="tech-tag"><i class="fab fa-react"></i> React</span>
-            <span class="tech-tag"><i class="fas fa-code"></i> TypeScript</span>
+            <span class="tech-tag"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+            <span class="tech-tag"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+            <span class="tech-tag"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+            <span class="tech-tag"><i class="fab fa-react" aria-hidden="true"></i> React</span>
+            <span class="tech-tag"><i class="fas fa-code" aria-hidden="true"></i> TypeScript</span>
           </div>
         </div>
 
         <div class="tech-category">
           <div class="tech-cat-header">
-            <div class="tech-cat-icon"><i class="fas fa-server"></i></div>
+            <div class="tech-cat-icon"><i class="fas fa-server" aria-hidden="true"></i></div>
             <div>
               <h3>Backend & Databases</h3>
               <p>Logic, APIs & data persistence</p>
             </div>
           </div>
           <div class="tech-tags">
-            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
-            <span class="tech-tag"><i class="fas fa-database"></i> SQL</span>
-            <span class="tech-tag"><i class="fas fa-leaf"></i> MongoDB</span>
-            <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tech-tag"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+            <span class="tech-tag"><i class="fas fa-database" aria-hidden="true"></i> SQL</span>
+            <span class="tech-tag"><i class="fas fa-leaf" aria-hidden="true"></i> MongoDB</span>
+            <span class="tech-tag"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</span>
           </div>
         </div>
 
         <div class="tech-category">
           <div class="tech-cat-header">
-            <div class="tech-cat-icon"><i class="fas fa-terminal"></i></div>
+            <div class="tech-cat-icon"><i class="fas fa-terminal" aria-hidden="true"></i></div>
             <div>
               <h3>Tools & DevOps</h3>
               <p>Automation, versioning & deployment</p>
             </div>
           </div>
           <div class="tech-tags">
-            <span class="tech-tag"><i class="fas fa-code"></i> Bash</span>
-            <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
-            <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+            <span class="tech-tag"><i class="fas fa-code" aria-hidden="true"></i> Bash</span>
+            <span class="tech-tag"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
+            <span class="tech-tag"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span>
           </div>
         </div>
 
         <div class="tech-category">
           <div class="tech-cat-header">
-            <div class="tech-cat-icon"><i class="fas fa-brain"></i></div>
+            <div class="tech-cat-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
             <div>
               <h3>AI & Automation</h3>
               <p>Intelligent systems & agentic workflows</p>
             </div>
           </div>
           <div class="tech-tags">
-            <span class="tech-tag"><i class="fas fa-wand-magic-sparkles"></i> AI / ML</span>
-            <span class="tech-tag"><i class="fas fa-robot"></i> Agents</span>
-            <span class="tech-tag"><i class="fas fa-plug"></i> MCP</span>
-            <span class="tech-tag"><i class="fas fa-language"></i> LLMs</span>
+            <span class="tech-tag"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> AI / ML</span>
+            <span class="tech-tag"><i class="fas fa-robot" aria-hidden="true"></i> Agents</span>
+            <span class="tech-tag"><i class="fas fa-plug" aria-hidden="true"></i> MCP</span>
+            <span class="tech-tag"><i class="fas fa-language" aria-hidden="true"></i> LLMs</span>
           </div>
         </div>
 
@@ -324,24 +338,24 @@
       <h2 class="footer-name" data-reveal>Wenceslau <span class="accent">Graus</span></h2>
       <p class="footer-tagline" data-reveal>Always exploring. Always building.</p>
       <div class="social-links" data-reveal>
-        <a href="https://twitter.com/TecnoFes" class="social-link" target="_blank" aria-label="Twitter"><i
-            class="fab fa-x-twitter"></i></a>
-        <a href="https://www.facebook.com/wenceslau.graus" class="social-link" target="_blank" aria-label="Facebook"><i
-            class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/elgranviatge/" class="social-link" target="_blank" aria-label="Instagram"><i
-            class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/wenceslaugraus/" class="social-link" target="_blank"
-          aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.strava.com/athletes/wenceslau_graus" class="social-link" target="_blank"
-          aria-label="Strava"><i class="fab fa-strava"></i></a>
-        <a href="mailto:wgraus@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://twitter.com/TecnoFes" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+            class="fab fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/wenceslau.graus" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+            class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/elgranviatge/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+            class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/wenceslaugraus/" class="social-link" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.strava.com/athletes/wenceslau_graus" class="social-link" target="_blank" rel="noopener noreferrer"
+          aria-label="Strava"><i class="fab fa-strava" aria-hidden="true"></i></a>
+        <a href="mailto:wgraus@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
       </div>
-      <p class="footer-copy">&copy; 2024 Wenceslau Graus &mdash; <a
+      <p class="footer-copy">&copy; 2026 Wenceslau Graus &mdash; <a
           href="https://www.wenceslaugraus.com">www.wenceslaugraus.com</a></p>
     </div>
   </footer>
 
-  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/portfolio.js" defer></script>
 </body>
 
 </html>
